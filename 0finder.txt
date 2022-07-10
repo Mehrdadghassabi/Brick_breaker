@@ -1,0 +1,116 @@
+	int flgo = 1;
+	int n = 3;
+	int pan = 1;
+	int z = h;
+	int u = g;
+	int m;
+	if (emwar[z][u] == 0) {
+	while (flgo == 1) {
+	m = 0;
+	flgo = 0;
+	for (int p = z - pan; p <= z + pan; p++) {
+	if (emwar[z + pan][p]
+	E = z + pan;
+	if (emwar[E][p] == 0) {
+	flgo = 1;
+	for (int k = canterb - (2*n+1)- m; k < canterb; k++) {
+	if ((ballaii[k][0] == E - 1 && ballaii[k][1] == p) ||
+	(ballaii[k][0] == E + 1 && ballaii[k][1] == p) ||
+	(ballaii[k][0] == E && ballaii[k][1] == p + 1) ||
+	(ballaii[k][0] == E + 1 && ballaii[k][1] == p + 1) ||
+	(ballaii[k][0] == E - 1 &&ballaii[k][1] == p + 1) ||
+	(ballaii[k][0] == E + 1 &&ballaii[k][1] == p - 1) ||
+	(ballaii[k][0] == E - 1 && ballaii[k][1] == p - 1) ||
+	(ballaii[k][0] == E && ballaii[k][1] == p - 1)) {
+         canterb++;
+	m++;
+	ballaii[canterb][0] = E;
+	ballaii[canterb][1] = p;
+	break;
+	}
+	}
+	}
+	}
+
+
+	for (int p = z - pan; p <= z + pan - 1; p++) {
+	//emwar[p][z - pan]
+	int E = z - pan;
+	if (emwar[p][E] == 0) {
+	flgo = 1;
+	for (int k = canterc - (2*n) - m; k < canterc;k++) {
+         if ((rasti[k][0] == p - 1 && chap[k][1] == E) ||
+	(chap[k][0] == p + 1 && chap[k][1] == E) ||
+	(chap[k][0] == p &&chap[k][1] == E + 1) ||
+	(chap[k][0] == p + 1 && chap[k][1] == E + 1) ||
+	(chap[k][0] == p - 1 && chap[k][1] == E + 1) ||
+	(chap[k][0] == p + 1 && chap[k][1] == E - 1) ||
+	(chap[k][0] == p - 1 && chap[k][1] == E - 1) ||
+	(chap[k][0] == p && chap[k][1] == E - 1)) {
+	canterc++;
+	m++;
+	rasti[canterc][0] = p;
+	vorudi[canterc][1] = E;
+	break;
+	}
+	}
+	}
+        }
+
+	for (int p = z - pan + 1; i <= z + pan - 1; p++) {
+	//emwar[z - pan][p]
+	int E = z - pan;
+	if (emwar[E][p] == 0) {
+	flgo = 1;
+	for (int k = canterp - pow(2*n-1) - m; k < canterp; k++) {
+	if ((vorudi[k][0] == E - 1 && paiini[k][1] == p) ||
+	(paiini[k][0] == E + 1 && paiini[k][1] == p) ||
+	(paiini[k][0] == E && paiini[k][1] == p + 1) ||
+	(paiini[k][0] == E + 1 && paiini[k][1] == p + 1) ||
+        (paiini[k][0] == E - 1 && paiini[k][1] == p + 1) ||
+	(paiini[k][0] == E + 1 && paiini[k][1] == p - 1) ||
+	(paiini[k][0] == E - 1 && paiini[k][1] == p - 1) ||
+	(paiini[k][0] == E && paiini[k][1] == p - 1)) {
+	canterp++;
+         m++;
+        paiini[canterp][0] = E;
+	paiini[canterp][1] = p;
+	break;
+						}
+					}
+				}
+			}
+        for (int p = z - pan; i <= z + pan - 1; p++) {
+	E = z + pan;
+	if (emwar[p][z + pan] == 0) {
+	for (int k = canterr - (2*n) - m; k < canterr; k++) {
+	if ((rasti[k][0] == p - 1 && rasti[k][1] == E) ||
+	(rasti[k][0] == p + 1 && rasti[k][1] == E) ||
+	(rasti[k][0] == p && rasti[k][1] == E + 1) ||
+	(rasti[k][0] == p + 1 && rasti[k][1] == E + 1) ||
+	(rasti[k][0] == p - 1 && rasti[k][1] == E + 1) ||
+	(rasti[k][0] == p + 1 && rasti[k][1] == E - 1) ||
+	(rasti[k][0] == p - 1 && rasti[k][1] == E - 1) ||
+	(rasti[k][0] == p && rasti[k][1] == E - 1)) {
+	canterr++;
+	m++;
+	rasti[canterr][0] = p;
+	rasti[canterr][1] = E;
+	break;
+						}
+					}
+				}
+			}
+			pan++;
+			n++;
+		}
+}
+
+int canterp=0;
+int canterr=0;
+int canterc=0;
+int canterb=0;
+// paiini[canterp] 
+// balaii[canterb]
+// chap[canterc]	
+ //rast[canterr]
